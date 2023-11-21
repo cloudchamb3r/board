@@ -8,6 +8,9 @@ services:
       MARIADB_ROOT_PASSWORD: example
     volumes:
       - ./data:/var/lib/mysql
+    ports:
+      # host:container
+      - 3307:3306
   adminer:
     image: adminer
     restart: always
